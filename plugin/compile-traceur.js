@@ -1,17 +1,15 @@
-var fs = Npm.require('fs');
-var path = Npm.require('path');
-var _ = Npm.require('underscore');
-var traceur = Npm.require('traceur');
+var traceur = Npm.require("traceur");
 
 var handler = function (compileStep) {
-  var source = compileStep.read().toString('utf8');
+  var source = compileStep.read().toString("utf8");
   var outputFile = compileStep.inputPath + ".js";
+
   var options = {
     filename: compileStep.inputPath,
     sourceMap: true
   };
 
-  var result = traceur.compile(source);
+  var result = traceur.compile(source, options);
 
   if (result.errors.length > 0) {
     throw new Error(result.errors);
