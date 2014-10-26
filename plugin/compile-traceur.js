@@ -5,6 +5,7 @@ var handler = function (compileStep) {
   var outputFile = compileStep.inputPath + ".js";
 
   var options = {
+    experimental: true,
     filename: compileStep.inputPath,
     sourceMap: true
   };
