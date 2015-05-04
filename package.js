@@ -1,5 +1,9 @@
 Package.describe({
-  summary: "Javascript next to Javascript of today compiler"
+  summary: "Javascript next to Javascript of today compiler",
+  version: '1.0.1',
+  git: 'https://github.com/arcanis/meteor-traceur-experimental.git',
+  name: 'arcanis:traceur-experimental',
+  documentation: 'README.md'
 });
 
 Package.on_use(function (api) {
